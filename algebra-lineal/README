@@ -1,0 +1,6 @@
+### 2. Álgebra Lineal Computacional (`ejercicio2.py`)
+* **Descripción:** Implementación de operaciones matriciales complejas y cálculo de propiedades algebraicas fundamentales.
+* **Aspectos Técnicos:**
+  * Declaración y transformación de listas anidadas en matrices robustas de NumPy.
+  * Diferenciación práctica entre operaciones elemento a elemento (`A * B` o `C ** 2`) y operaciones puramente matriciales de álgebra lineal (`@` y `np.linalg.matmul`).
+  * Cálculo automatizado de la matriz inversa (`np.linalg.inv`) y el determinante de una matriz (`np.linalg.det`).
