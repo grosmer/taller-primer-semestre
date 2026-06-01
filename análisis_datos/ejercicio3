@@ -1,0 +1,31 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+datos=np.loadtxt('datos.txt',delimiter=",") #importamos el archivo con la información que queremos y mejor para separar por columnas
+
+plt.figure()
+plt.scatter(datos[:,0],datos[:,1],color='red')
+plt.grid(True)
+plt.title("Segunda columna en función de la primera:")
+plt.xlabel("Primer columna")
+plt.ylabel("Segundo Columna")
+plt.savefig("fig31.png")
+plt.show()
+
+plt.figure()
+plt.scatter(datos[:,0],datos[:,2],color='blue')
+plt.grid(True)
+plt.title("Tercera columna en función de la primera:")
+plt.xlabel("Primer columna")
+plt.ylabel("Tercera columna")
+plt.savefig("fig32.png")
+plt.show()
+
+plt.figure()
+plt.scatter(datos[:,0],datos[:,3],color='green')
+plt.grid(True)
+plt.title("Cuarta columna en función de la primera:")
+plt.xlabel("Primer columna")
+plt.ylabel("Cuarta columna")
+plt.savefig("fig33.png")
+plt.show()
