@@ -1,0 +1,33 @@
+import numpy as np
+import math
+print("Vamos a resolver una función de segundo grado de la forma: a*x^2 + b*x + c = 0")
+print("Introducimos el valor de a")
+a=float(input())
+print("Introducimos el valor de b")
+b=float(input())
+print("Introducimos el valor de c")
+c=float(input())
+#para resolverla precisamos a por x a la 2 mas b por x mas c = 0; encontrar ecuación bhaskara
+
+def funcion_cuadratica(a, b, c):
+    if a != 0:
+        d = b**2 - 4*a*c #fórmula dentro de la cuadrática
+        if d < 0:
+            return "No tiene soluciones reales"
+
+        e = math.sqrt(d)
+        x1 = (-b+e)/(2*a)
+        x2 = (-b-e)/(2*a)
+        return x1, x2
+    else:
+        if b != 0:
+            x1 = -c / b # ecuación lineal bx + c = 0
+            return x1
+        else:
+            if c == 0: # caso excepcional
+                return "Infinitas soluciones"
+            else:
+                return "No tiene solución"
+
+solucion = (funcion_cuadratica(a, b, c))
+print("Las soluciones son", solucion)
