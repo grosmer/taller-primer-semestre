@@ -3,7 +3,7 @@
 
 # Prácticas de Computación Científica y Álgebra con Python 
 
-¡Hola! En este repositorio organizo y documento los scripts desarrollados durante mis prácticas de programación orientada a las ciencias exactas y la resolución de problemas matemáticos. 
+Hola!!! En este repositorio organizo y documento los scripts desarrollados durante mis prácticas de programación orientada a las ciencias exactas y la resolución de problemas matemáticos. 
 
 El objetivo de este espacio es consolidar el uso de librerías esenciales del ecosistema científico y de datos, aplicando lógica de programación avanzada y automatización de procesos.
 
