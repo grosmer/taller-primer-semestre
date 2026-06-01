@@ -1,0 +1,25 @@
+import numpy as np
+
+a=([3,0,-2],[1,4,5],[-1,1,2])
+A=np.array(a)
+b=([1,-1,1],[0,6,1],[3,-2,5])
+B=np.array(b)
+c=([-1,-1,2],[5,1,1],[-3,-2,3])
+C=np.array(c)
+print(A)
+print(B)
+print(C)
+D_resultado=(A+B)- C
+print(d)
+e=np.linalg.matmul(A,B) #multiplicación matricial
+print(e)
+f=C@C   #elevamos la matriz completa al cuadrado
+print(f)
+g=C**2  #elevamos elemento a elemento de la matriz al cuadrado
+print(g)
+h=np.linalg.inv(A)
+print(h)
+i=np.linalg.det(B)
+print(i)
+D=A*B
+print(D)
