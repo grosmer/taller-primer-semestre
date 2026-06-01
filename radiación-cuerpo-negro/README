@@ -1,0 +1,27 @@
+# Procesamiento de Datos Físicos y Ajuste Lineal con Python 
+
+Este script en Python automatiza el procesamiento de datos experimentales, el cálculo de variables termodinámicas/eléctricas y la generación de gráficos con ajustes lineales utilizando métodos numéricos. Es un ejemplo práctico de cómo aplico la programación al análisis de fenómenos físicos.
+
+## Se utiliza
+* **Python 3**
+* **NumPy:** Para la manipulación eficiente de matrices de datos (`np.array`), cálculo indexado (slicing) y ajuste polinómico de primer grado (`np.polyfit`).
+* **Matplotlib (pyplot):** Para la visualización de datos, generación de gráficos de dispersión (`scatter`), trazado de rectas de ajuste (`plot`) y exportación de imágenes (`savefig`).
+
+## ¿Qué problemas resuelve este script?
+
+El código está dividido en dos grandes bloques de análisis:
+
+### 1. Modelado de Resistencia, Temperatura y Ajuste Logarítmico
+* **Física:** A partir de mediciones experimentales de Voltaje ($V$), Corriente ($I$) y Potencia/Voltaje corregido ($Vcon$), el script calcula la resistencia eléctrica ($R = V/I$). Luego, utiliza el coeficiente térmico de resistencia ($\alpha = 4.5 \times 10^{-3}$) para determinar la variación de la temperatura ($T$) respecto a una referencia ($Tref$).
+* **Procesamiento:** Aplica una transformación logarítmica ($\log_{10}$) sobre la temperatura y el voltaje para linealizar una relación potencialmente potencial.
+* **Resultado:** Realiza un ajuste lineal por mínimos cuadrados para encontrar la pendiente y la ordenada al origen, graficando los puntos experimentales versus la recta teórica predicha.
+
+### 2. Validación de la Ley de Desplazamiento de Wien
+* **Física:** Analiza la relación entre la temperatura ($T$) y la longitud de onda de máxima emisión ($\lambda$). Según la Ley de Wien, existe una relación inversa entre ambas variables.
+* **Procesamiento:** El script calcula la temperatura inversa ($T^{-1}$) para transformar la relación hiperbólica en una relación lineal.
+* **Resultado:** Utiliza `polyfit` para calcular la constante de acoplamiento mediante una regresión lineal y grafica el comportamiento, demostrando visualmente el cumplimiento de la ley física.
+
+##  Gráficas Generadas
+El script exporta automáticamente dos visualizaciones limpias y profesionales:
+1. `grafica.png`: Relación logarítmica de Voltaje vs. Temperatura con rejilla (`grid`) y leyenda de la ecuación de la recta.
+2. `grafica_wein.png`: Ajuste lineal de la longitud de onda en función de la temperatura inversa ($T^{-1}$).
